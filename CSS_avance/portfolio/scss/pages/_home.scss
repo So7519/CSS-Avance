@@ -1,0 +1,41 @@
+@use '../base/variables';
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, variables.$primary-color, variables.$secondary-color);
+    color: white;
+    text-align: center;
+
+    &-content {
+        max-width: 800px;
+        padding: 0 variables.$base-spacing * 2;
+
+        h1 {
+            font-size: 4rem; // Augmentation de la taille
+            margin-bottom: variables.$base-spacing;
+            color: white;
+        }
+
+        p {
+            font-size: 1.75rem; // Augmentation de la taille
+            font-weight: 300;
+        }
+    }
+
+    @media screen and (max-width: variables.$tablet) {
+        height: 80vh;
+
+        &-content {
+            h1 {
+                font-size: 3rem; // Ajustement pour mobile
+            }
+
+            p {
+                font-size: 1.5rem; // Ajustement pour mobile
+            }
+        }
+    }
+}

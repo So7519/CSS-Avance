@@ -1,0 +1,49 @@
+@use 'base/variables';
+@use 'base/reset';
+@use 'base/typography';
+
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/animations';
+
+@use 'layout/header';
+@use 'layout/navigation';
+@use 'layout/footer';
+@use 'layout/grid';
+
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/projects';
+@use 'pages/contact';
+
+body {
+    font-family: variables.$font-main;
+    background-color: variables.$background-color;
+    color: variables.$text-color;
+    line-height: 1.6;
+}
+
+// Ajout d'une animation globale pour les sections
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Responsive global
+@media screen and (max-width: variables.$mobile) {
+    // Ajustements pour mobile
+    body {
+        padding: variables.$base-spacing;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: variables.$base-spacing;
+    }
+}

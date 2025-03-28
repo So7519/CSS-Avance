@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - Développeur Web</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Farraï Sofiane</div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1>Sofiane Farraï</h1>
+                <p>Développeur Web Créatif</p>
+            </div> 
+        </section>
+
+        <section id="a-propos" class="about">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>À Propos de Moi</h2>
+                    <p>Passionné de développement web, je crée des expériences numériques innovantes et intuitives.</p>
+                </div>
+                <div class="about-skills">
+                    <h3>Compétences</h3>
+                    <div class="skills-grid">
+                        <div class="skill">HTML5</div>
+                        <div class="skill">CSS3</div>
+                        <div class="skill">SASS</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">React</div>
+                        <div class="skill">Git</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projets" class="projects">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="PSG.webp" alt="PSG">
+                    <div class="project-info">
+                        <h3>Site Non Officiel du PSG</h3>
+                        <p>Un site HTML/CSS que j'ai créer de moi même avec des informations qui ne sont pas donner par le PSG eux mêmes.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="portfolio/assets/images/projet2.jpg" alt="Projet Todolist">
+                    <div class="project-info">
+                        <h3>Todolist</h3>
+                        <p>Une Todolist que j'ai fais avec mes camarades Hugo et Lam</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contactez-moi</h2>
+            <form>
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <h3>Retrouvez-moi sur</h3>
+            <a href="https://www.linkedin.com/in/sofiane-farra%C3%AF-2b3922336/" class="social-icon">
+                <img src="LinkedIn.webp" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/So7519" class="social-icon">
+                <img src="git.webp" alt="GitHub">
+            </a>
+            <a href="https://x.com/Soso75192" class="social-icon">
+                <img src="X.webp" alt="Twitter">
+            </a>
+        </div>
+        <p>&copy; 2024 Farraï Sofiane. Tous droits réservés.</p>
+    </footer>
+
+    <script src="portfolio/js/script.js"></script>
+</body>
+</html>

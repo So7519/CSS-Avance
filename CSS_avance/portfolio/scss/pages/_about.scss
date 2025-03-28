@@ -1,0 +1,62 @@
+@use '../base/variables';
+@use 'sass:color';
+@use '../components/cards';
+
+.about {
+    padding: variables.$base-spacing * 5 0;
+    background-color: white;
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: variables.$base-spacing * 3;
+        align-items: center;
+
+        @media screen and (max-width: variables.$tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-text {
+        h2 {
+            font-size: 2.75rem; // Augmentation de la taille du titre
+            margin-bottom: variables.$base-spacing * 2;
+        }
+
+        p {
+            font-size: 1.25rem; // Augmentation de la taille du paragraphe
+            line-height: 1.8; // Légère augmentation de l'interligne
+        }
+    }
+
+    &-skills {
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: variables.$base-spacing;
+
+            .skill {
+                background-color: color.adjust(variables.$background-color, $lightness: 5%);
+                border-radius: variables.$border-radius;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: variables.$base-spacing;
+                text-align: center;
+                font-weight: 500;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                    background-color: variables.$primary-color;
+                    color: white;
+                }
+            }
+
+            @media screen and (max-width: variables.$tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@use '../base/variables';
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: linear-gradient(135deg, variables.$primary-color, variables.$secondary-color);
+    color: white;
+    text-align: center;
+
+    &-content {
+        max-width: 800px;
+        padding: 0 variables.$base-spacing * 2;
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: variables.$base-spacing;
+            color: white;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+    }
+
+    @media screen and (max-width: variables.$tablet) {
+        height: 60vh;
+
+        &-content {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

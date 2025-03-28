@@ -1,0 +1,42 @@
+@use '../base/variables';
+@use 'sass:color';
+
+.contact {
+    background-color: color.adjust(variables.$background-color, $lightness: 3%);
+    padding: variables.$base-spacing * 5 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: variables.$base-spacing * 3;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: variables.$base-spacing;
+
+        input,
+        textarea {
+            width: 100%;
+            padding: variables.$base-spacing;
+            border-radius: variables.$border-radius;
+            border: 1px solid color.adjust(variables.$text-color, $lightness: 50%);
+            transition: border-color 0.3s ease;
+
+            &:focus {
+                border-color: variables.$primary-color;
+            }
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: variables.$base-spacing;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@use '../base/variables';
+@use 'sass:math';
+@use 'sass:color';
+
+// Style de carte générique
+.card {
+    background-color: white;
+    border-radius: variables.$border-radius;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+// Carte de projet
+.project-card {
+    @extend .card;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    .project-info {
+        padding: variables.$base-spacing;
+        
+        h3 {
+            margin-bottom: math.div(variables.$base-spacing, 2);
+            color: variables.$primary-color;
+        }
+
+        p {
+            color: color.adjust(variables.$text-color, $lightness: -10%);
+        }
+    }
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+// Carte de compétence
+.skill-card {
+    @extend .card;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: variables.$base-spacing;
+    text-align: center;
+    font-weight: 500;
+    background-color: color.adjust(variables.$background-color, $lightness: 5%);
+}

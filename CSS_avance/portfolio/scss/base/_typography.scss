@@ -1,0 +1,60 @@
+@use '../base/variables';
+@use 'sass:math';
+@use 'sass:color';
+
+// Styles de typographie globaux
+body {
+    font-family: variables.$font-main;
+    color: variables.$text-color;
+    font-size: 1.125rem; // Augmentation de la taille de base
+}
+
+// Styles de titres
+h1, h2, h3, h4, h5, h6 {
+    font-family: variables.$font-heading;
+    margin-bottom: variables.$base-spacing;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3rem; // Augmentation de la taille
+    font-weight: 700;
+    color: variables.$primary-color;
+
+    @media screen and (max-width: variables.$tablet) {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem; // Augmentation de la taille
+    font-weight: 600;
+    border-bottom: 2px solid variables.$primary-color;
+    padding-bottom: math.div(variables.$base-spacing, 2);
+
+    @media screen and (max-width: variables.$tablet) {
+        font-size: 2rem;
+    }
+}
+
+h3 {
+    font-size: 2rem; // Augmentation de la taille
+    font-weight: 500;
+}
+
+// Paragraphes
+p {
+    margin-bottom: variables.$base-spacing;
+    line-height: 1.8; // Légère augmentation de l'interligne
+    font-size: 1.125rem; // Augmentation de la taille
+}
+
+// Styles de liens
+a {
+    color: variables.$primary-color;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: color.adjust(variables.$primary-color, $lightness: -10%);
+    }
+}
